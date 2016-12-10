@@ -1,6 +1,6 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
+  "name": "Z3 Academy",
+  "short_name": "Z3 Academy",
   "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
