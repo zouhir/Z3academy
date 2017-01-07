@@ -1,0 +1,41 @@
+// adds opacity to hex background color
+@mixin background-opacity($color, $opacity: 0.5) {
+    background-color: $color; /* The Fallback */
+    background-color: rgba($color, $opacity);
+}
+
+// well, clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// breakpoints
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: $breakpoint-xs) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: $breakpoint-lg ) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (min-width: $breakpoint-xl ) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint media queries mixin supports: drone, helicopter, boeing, airbus";
+  }
+}

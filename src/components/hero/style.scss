@@ -1,0 +1,133 @@
+@import '~style/helpers';
+
+$hero-height: 400px;
+$hero-height-xs: 300px;
+
+.hero {
+  width: 100%;
+  height: $hero-height;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  @include breakpoint(xs) {
+    height: $hero-height-xs;
+    background-color: $yellow;
+    z-index: 100;
+  }
+  @include breakpoint(sm) {
+    background-image: url(/assets/img/hero.jpg);
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(-157deg, #394958 0%, #6E6354 100%);
+      opacity: .8;
+      top:0;
+      left:0;
+    }
+  }
+}
+
+.content {
+  @extend .container;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include clearfix();
+  @include breakpoint(xs){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .logo {
+    display: none;
+    @include breakpoint(sm) {
+      display: inline-block;
+    }
+  }
+  p {
+    margin-top: 15px;
+    color: rgba($color: #FFF, $alpha: 0.75);
+    font-family: $header-font;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .note {
+    @include breakpoint(xs){
+      color: $dark-navy;
+    }
+    color: #FFF;
+    font-size: 13px;
+    color: rgba($color: #FFF, $alpha: 0.75);
+    font-weight: 300;
+    a {
+      @include breakpoint(xs){
+        color: #FFF;
+      }
+      color: $yellow;
+      padding-left: 5px;
+    }
+  }
+}
+
+.mheader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  display: none;
+  z-index: 101;
+  .logoM {
+    height: 32px;
+    margin-top: 9px;
+    display: inline-block;
+  }
+  .menueM {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top:0;
+    text-align: center;
+    cursor: pointer;
+    &.left{
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+    img {
+      display: inline-block;
+      margin-top: 15px;
+      height: 20px;
+    }
+  }
+  @include breakpoint(xs) {
+    height: 50px;
+    background: $yellow;
+    display: block;
+    .logoM {
+      display: inline-block;
+    }
+  }
+  @include breakpoint(sm) {
+    display: block;
+    .logoM {
+      display: none;
+    }
+  }
+  @include breakpoint(lg) {
+    display: none;
+    .logoM {
+      display: none;
+    }
+  }
+
+}
