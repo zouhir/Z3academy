@@ -9,8 +9,6 @@ function init() {
 	root = render(<App />, document.body, root);
 }
 
-console.log(process.argv.find(v => v.includes('webpack-‌​dev-server')))
-
 // register ServiceWorker via OfflinePlugin, for prod only:
 if (process.env.NODE_ENV==='production') {
 	require('./pwa');
