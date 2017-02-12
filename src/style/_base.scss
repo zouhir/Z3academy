@@ -1,8 +1,5 @@
 // container with consideration for sidebar
 .container {
-  @include breakpoint(lg) {
-    padding-left: $nav-width;
-  }
   position: relative;
   @include clearfix();
 }

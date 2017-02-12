@@ -1,0 +1,56 @@
+{
+  "data": [{
+    "title": "Discovering JavaScript",
+    "discription": "Our very first step in the JavaScript universe, where the instructor will cover the language basic features in Arabic in a fun and easy way.",
+    "instructor": {
+      "name": "Zouhir Chahoud",
+      "avatar": "https://s3.eu-central-1.amazonaws.com/z3-academy-courses/instructors/zouhir.jpg",
+      "website": "http://zouhir.org",
+      "github": "https://github.com/zouhir",
+      "twitter": "https://twitter.com/_zouhir"
+    },
+    "images": {
+      "thumbnail": "https://s3.eu-central-1.amazonaws.com/z3-academy-courses/thumbnails/discovering-javascript.jpg"
+    },
+    "count": 10,
+    "duration": "1:10",
+    "url": "discovering-javascript",
+    "content": [
+      {
+        "title": "Introduction",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Variables & Types",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Numbers",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Strings",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Objects",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Arrays",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      },
+      {
+        "title": "Functions",
+        "duration": 50,
+        "videoId": "P6d0VPbHcM0"
+      }
+    ]
+  }]
+}

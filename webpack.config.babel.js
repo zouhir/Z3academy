@@ -1,27 +1,27 @@
-import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import ReplacePlugin from 'replace-bundle-webpack-plugin';
-import OfflinePlugin from 'offline-plugin';
-import path from 'path';
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import autoprefixer from 'autoprefixer'
+import CopyWebpackPlugin from 'copy-webpack-plugn'
+import ReplacePlugin from 'replace-bundle-webpack-plugin'
+import OfflinePlugin from 'offline-plugin'
+import path from 'path'
 
-const ENV = process.env.NODE_ENV || 'development';
+const ENV = process.env.NODE_ENV || 'development'
 
-const CSS_MAPS = ENV!=='production';
+const CSS_MAPS = ENV !== 'production'
 
 module.exports = {
-	context: path.resolve(__dirname, "src"),
-	entry: './index.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: './index.js',
 
-	output: {
-		path: path.resolve(__dirname, "build"),
-		publicPath: '/',
-		filename: 'bundle.js'
-	},
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
 
-	resolve: {
+  resolve: {
 		extensions: ['', '.jsx', '.js', '.json', '.scss'],
 		modulesDirectories: [
 			path.resolve(__dirname, "src/lib"),
@@ -31,6 +31,7 @@ module.exports = {
 		alias: {
 			components: path.resolve(__dirname, "src/components"),    // used for tests
 			style: path.resolve(__dirname, "src/style"),
+      uploads: path.resolve(__dirname, "uploads"),
 			'react': 'preact-compat',
 			'react-dom': 'preact-compat'
 		}
@@ -53,7 +54,7 @@ module.exports = {
 			{
 				// Transform our own .(scss|css) files with PostCSS and CSS-modules
 				test: /\.(scss|css)$/,
-				include: [path.resolve(__dirname, 'src/components')],
+				include: [path.resolve(__dirname, 'src/components'), path.resolve(__dirname, 'src/containers')],
 				loader: ExtractTextPlugin.extract('style?singleton', [
 					`css-loader?modules&importLoaders=1&sourceMap=${CSS_MAPS}`,
 					'postcss-loader',
@@ -62,7 +63,7 @@ module.exports = {
 			},
 			{
 				test: /\.(scss|css)$/,
-				exclude: [path.resolve(__dirname, 'src/components')],
+				exclude: [path.resolve(__dirname, 'src/components'), path.resolve(__dirname, 'src/containers')],
 				loader: ExtractTextPlugin.extract('style?singleton', [
 					`css?sourceMap=${CSS_MAPS}`,
 					`postcss`,

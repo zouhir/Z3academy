@@ -1,0 +1,20 @@
+{
+  "main": [
+    {
+        "title": "Home",
+        "link": "/"
+    },
+    {
+        "title": "Writings",
+        "link": "https://medium.com/z3academy"
+    },
+    {
+        "title": "About Us",
+        "link": "/about"
+    },
+    {
+        "title": "Contact Us",
+        "link": "/contact"
+    }
+  ]
+}

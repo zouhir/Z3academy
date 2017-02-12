@@ -10,6 +10,7 @@ html, body {
 	font-family: $main-font;
 	font-weight: 400;
 	color: $black;
+  overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -18,6 +19,39 @@ h1, h2, h3, h4, h5, h6{
   font-family: $header-font;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 #app {
-  background: $beige;
+  position: relative;
+  min-height: 100%;
+  .page {
+    background: $beige;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    transition: top 0.2s linear, left 0.2s linear;
+    top: 0;
+    left: 0;
+    @include breakpoint (xs) {
+      &.toggle {
+        top: 60px;
+        left: 300px;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.4);
+          position: absolute;
+          z-index: 9999;
+        }
+      }
+    }
+  }
 }

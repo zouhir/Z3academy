@@ -16,7 +16,7 @@ export default class SignupForm extends Component {
         <div class={style.wrapper}>
           <a href='' class={style.btnSignup}>Sign in</a>
           <a class={style.formFooter}>Forgot your password</a>
-          <a class={style.formFooter}>I don't have an account</a>
+          <a class={style.formFooter}>{`I don't have an account`}</a>
         </div>
       </div>
     )

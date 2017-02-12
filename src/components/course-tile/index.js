@@ -7,16 +7,18 @@ export default class CourseTile extends Component {
     return (
       <div class={style.layoutTile}>
         <div class={style.courseTile}>
-          <div class={style.cover} />
+          <div class={style.cover} style={{'backgroundImage': `url(${this.props.images.thumbnail})`}} />
           <div class={style.info}>
-            <div>img</div>
-            <div>
-              <h5>Course one</h5>
-              <p>Zouhir is fantastic, super duper</p>
+            <div class={style.avatar}>
+              <img src={this.props.instructor.avatar} />
             </div>
             <div>
-              <Link class={style.count}>20 Lessons</Link>
-              <Link class={style.play}>
+              <h5>{this.props.title}</h5>
+              <p>{this.props.discription}</p>
+            </div>
+            <div>
+              <Link class={style.count} href={`/course/${this.props.url}`}>{this.props.count} Lessons</Link>
+              <Link class={style.play} href={`/course/${this.props.url}`}>
                 <img src='/assets/img/play.svg' />
               </Link>
             </div>
