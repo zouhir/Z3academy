@@ -28,7 +28,7 @@ export default class NavHome extends Component {
         </nav>
         {/* close  */}
         <a class={style.close} onClick={this.props.toggleNav}>
-          <img src='/assets/img/close.svg' />
+          <img src='/assets/img/close.svg' alt='Close Z3 Academy Navigation' />
         </a>
       </div>
     )

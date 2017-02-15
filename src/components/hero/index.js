@@ -8,14 +8,14 @@ export default class Hero extends Component {
       <div class={style.hero}>
         {/* mobile only hero */}
         <div class={style.mheader}>
-          <img src='/assets/img/logo-white.svg' class={style.logoM} />
+          <img src='/assets/img/logo-white.svg' class={style.logoM} alt='Z3 Academy Logo' />
           {/* 'hamburger' menu */}
           <a class={`${style.menueM} ${style.left}`} onClick={() => this.props.toggleNav()}>
-            <img src='/assets/img/mobile-menu.svg' />
+            <img src='/assets/img/mobile-menu.svg' alt='Z3 Acadeeemy Navigation' />
           </a>
         </div>
         <div class={style.content}>
-          <img src='/assets/img/logo.svg' width='180' class={style.logo} />
+          <img src='/assets/img/logo.svg' width='180' class={style.logo} alt='Z3 Academy Logo' />
           <p>Teaching Web Programming</p>
           <p class={style.note}>Our main motivation and focus is teaching refugees { <Link>learn more</Link> }</p>
         </div>

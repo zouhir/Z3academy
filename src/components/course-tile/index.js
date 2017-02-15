@@ -10,7 +10,7 @@ export default class CourseTile extends Component {
           <div class={style.cover} style={{'backgroundImage': `url(${this.props.images.thumbnail})`}} />
           <div class={style.info}>
             <div class={style.avatar}>
-              <img src={this.props.instructor.avatar} />
+              <img src={this.props.instructor.avatar} alt={`Course By: ${this.props.instructor.name}`} />
             </div>
             <div>
               <h5>{this.props.title}</h5>
@@ -19,7 +19,7 @@ export default class CourseTile extends Component {
             <div>
               <Link class={style.count} href={`/course/${this.props.url}`}>{this.props.count} Lessons</Link>
               <Link class={style.play} href={`/course/${this.props.url}`}>
-                <img src='/assets/img/play.svg' />
+                <img src='/assets/img/play.svg' alt={`Start ${this.props.title} now`} />
               </Link>
             </div>
           </div>

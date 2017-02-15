@@ -18,7 +18,7 @@ export default class NavSecondary extends Component {
       <div>
         <nav class={style.altNav}>
           <Link href='/' class={style.logo + ' ' + style.hideXs}>
-            <img src='/assets/img/logo-white.svg' />
+            <img src='/assets/img/logo-white.svg' alt='Z3 Academy Logo' />
           </Link>
           {
             main.map((item) => (
