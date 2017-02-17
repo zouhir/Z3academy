@@ -71,7 +71,7 @@ $nav-height: 440px;
 					&:hover,
 					&:active {
 						color: $yellow;
-						@include breakpoint(lg) {
+						@include breakpoint(md) {
 							color: $white;
 						}
 					}

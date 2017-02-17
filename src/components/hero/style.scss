@@ -114,6 +114,12 @@ $hero-height-xs: 300px;
       display: none;
     }
   }
+  @include breakpoint(md) {
+    display: none;
+    .logoM {
+      display: none;
+    }
+  }
   @include breakpoint(lg) {
     display: none;
     .logoM {
