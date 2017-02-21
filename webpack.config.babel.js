@@ -54,7 +54,7 @@ module.exports = {
         test: /\.(scss|css)$/,
         include: [path.resolve(__dirname, 'src/components'), path.resolve(__dirname, 'src/containers')],
         loader: ExtractTextPlugin.extract('style?singleton', [
-          `css-loader?modules&importLoaders=1&sourceMap=${CSS_MAPS}`,
+          `css-loader?modules&importLoaders=1&localIdentName=[local]${process.env.CSS_MODULES_IDENT || '_[hash:base64:5]'}&sourceMap=${CSS_MAPS}`,
           'postcss-loader',
           `sass-loader?sourceMap=${CSS_MAPS}`
         ].join('!'))

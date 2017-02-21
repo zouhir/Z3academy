@@ -1,0 +1,15 @@
+@import '~style/helpers';
+
+.home {
+	padding: 0px;
+	@include breakpoint(lg) {
+		padding-left: $nav-width;
+	}
+	min-height: 100%;
+	width: 100%;
+  background-color: inherit;
+  .courseWrapper {
+    padding: 40px 20px;
+    margin-left: -20px;
+  }
+}
