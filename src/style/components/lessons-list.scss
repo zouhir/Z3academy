@@ -1,0 +1,57 @@
+@import '~style/helpers';
+
+.lessons {
+  float: left;
+  background: #FFF;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: -12px 0 30px 0 rgba(0,0,0,0.10);
+  width: 100%;
+  h1 {
+    font-family: $header-font;
+    font-size: 18px;
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  @include breakpoint(lg) {
+    width: 35%;
+    max-width: 380px;
+    min-height: 100vh;
+    h1 {
+      font-size: 22px;
+    }
+  }
+  @include breakpoint(xl) {
+    max-width: 420px;
+  }
+}
+
+.lessonList {
+  width: 100%;
+  li {
+    width: 100%;
+    a {
+      width: 100%;
+      padding: 20px 15px;
+      color: $dark-navy;
+      font-family: $main-font;
+      font-size: 14px;
+      width: 100%;
+      display: block;
+      position: relative;
+      @include breakpoint(lg) {
+        font-size: 16px;
+      }
+      span {
+        position: absolute;
+        right: 25px;
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 0.7;
+      }
+      &:hover {
+        background: $beige;
+      }
+    }
+  }
+}

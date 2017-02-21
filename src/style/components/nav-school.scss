@@ -1,0 +1,79 @@
+@import '~style/helpers';
+
+.altNav {
+  float: left;
+  width: $nav-school-width;
+  background: $dark-navy;
+  width: 100%;
+  padding: 15px 0px;
+  text-align: center;
+  position: relative;
+  @include breakpoint(lg) {
+    padding: 15px 0px;
+    height: 100vh;
+    width: 70px;
+    transition: width 0.2s linear;
+  }
+  a {
+    display: inline-block;
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-family: $header-font;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 0px;
+    @include breakpoint(lg) {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+    }
+    &.logo {
+      text-align: center;
+      @include breakpoint(lg){
+        margin-bottom: 30px;
+      }
+    }
+    &.menu {
+      display: none;
+      margin: 15px 0px;
+      @include breakpoint(lg) {
+        display: block;
+      }
+      svg {
+        max-height: 100%;
+      }
+    }
+    img {
+      display: inline-block;
+      width: 100%;
+      max-width: 50px;
+    }
+  }
+  .altBurger {
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    top: 50%;
+    margin-top: -25px;
+    position: absolute;
+    display: block;
+    padding: 17px 3px;
+    display: block;
+    @include breakpoint(lg) {
+      display: none;
+    }
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+      fill: #FFF;
+      path {
+        fill: #FFF;
+      }
+    }
+  }
+}

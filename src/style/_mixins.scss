@@ -12,6 +12,12 @@
     clear: both;
   }
 }
+$breakpoint-xxl  : 1330px !default;
+$breakpoint-xl  : 1200px !default;
+$breakpoint-lg  : 992px !default;
+$breakpoint-md  : 768px !default;
+$breakpoint-sm : 576px !default;
+$breakpoint-xs  : 576px !default;
 
 // breakpoints
 @mixin breakpoint($class) {
@@ -35,8 +41,12 @@
     @media (min-width: $breakpoint-xl ) { @content; }
   }
 
+  @else if $class == xxl {
+    @media (min-width: $breakpoint-xxl ) { @content; }
+  }
+
   @else {
-    @warn "Breakpoint media queries mixin supports: drone, helicopter, boeing, airbus";
+    @warn "Breakpoint media queries mixin";
   }
 }
 

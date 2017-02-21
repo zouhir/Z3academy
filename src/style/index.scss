@@ -1,5 +1,14 @@
 @import 'reset';
 @import 'helpers';
+@import './components/course-tile';
+@import './components/hero';
+@import './components/lessons-list';
+@import './components/nav-home';
+@import './components/nav-mobile';
+@import './components/nav-school';
+@import './components/signup';
+@import './screens/home';
+@import './screens/course';
 
 html, body {
 	height: 100%;
